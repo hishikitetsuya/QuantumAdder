@@ -14,7 +14,8 @@ namespace Quantum.adder
             {
                 for (var i = 0; i < 10; i++)
                 {
-                    int length = 8;
+                    // Must be less than 6, since we need (length * 6 + 1) qubits
+                    int length = 6;
                     int a = rand.Next((int)Math.Pow(2, length));
                     int b = rand.Next((int)Math.Pow(2, length));
                     System.Console.Write(" {0} + {1} = ", a, b);
